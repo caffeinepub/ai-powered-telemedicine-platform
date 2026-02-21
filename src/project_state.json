@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "AI-Powered Telemedicine Platform with Motoko backend and React + TypeScript frontend, featuring healthcare interface elements for improving healthcare access",
+  "architectural_notes": [
+    "Backend: Motoko",
+    "Frontend: React + TypeScript",
+    "Healthcare-focused interface design"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Medical professional avatar placeholder illustration for user profiles (doctor-avatar.dim_200x200.png)\n- Telemedicine hero banner with healthcare theme showing digital health concept (telemedicine-hero.dim_1200x400.png)\n- Stethoscope icon for medical dashboard (stethoscope-icon.dim_64x64.png)\n- Calendar icon for appointment scheduling (calendar-icon.dim_64x64.png)\n- Video consultation placeholder icon (video-call-icon.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-the-main-dashboard-layout-matching-the-uploaded-design-reference-including-navigation-structure-header-layout-and-overall-page-composition",
+      "title": "Implement the main dashboard layout matching the uploaded design reference, including navigation structure, header layout, and overall page composition",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-color-scheme-typography-and-visual-styling-from-the-uploaded-design-reference-throughout-the-application",
+      "title": "Apply the color scheme, typography, and visual styling from the uploaded design reference throughout the application",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-healthcare-specific-ui-components-as-shown-in-the-design-reference-including-patient-cards-appointment-widgets-and-medical-information-displays",
+      "title": "Create healthcare-specific UI components as shown in the design reference, including patient cards, appointment widgets, and medical information displays",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-telemedicine-consultation-interface-as-depicted-in-the-design-including-video-call-placeholder-area-and-consultation-controls",
+      "title": "Implement the telemedicine consultation interface as depicted in the design, including video call placeholder area and consultation controls",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-5",
+      "summary": "Create backend data models for managing patients, appointments, and consultation sessions to support the telemedicine platform features",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Implement backend functions for CRUD operations on patients, appointments, and medical records",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "AI-Powered Telemedicine Platform",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

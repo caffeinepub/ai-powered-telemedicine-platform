@@ -1,0 +1,119 @@
+{
+  "kind": "build_request",
+  "title": "Implement telemedicine platform design from uploaded reference",
+  "projectName": "AI Telemedicine Platform",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement the main dashboard layout matching the uploaded design reference, including navigation structure, header layout, and overall page composition",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard layout matches the visual hierarchy from the design reference",
+        "Navigation elements are positioned as shown in the design",
+        "Header and main content areas follow the design specifications"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Apply the color scheme, typography, and visual styling from the uploaded design reference throughout the application",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Primary and secondary colors match the design reference",
+        "Typography (font families, sizes, weights) matches the design",
+        "Spacing and padding follow the design system"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create healthcare-specific UI components as shown in the design reference, including patient cards, appointment widgets, and medical information displays",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Patient information cards match the design layout",
+        "Appointment scheduling interface follows design specifications",
+        "Medical data visualization components align with design reference"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement the telemedicine consultation interface as depicted in the design, including video call placeholder area and consultation controls",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Consultation interface layout matches design reference",
+        "Video call area is positioned and styled as shown",
+        "Consultation controls and buttons follow design patterns"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create backend data models for managing patients, appointments, and consultation sessions to support the telemedicine platform features",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Patient records can be created and retrieved",
+        "Appointment scheduling data is persisted",
+        "Consultation session data can be stored and queried"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement backend functions for CRUD operations on patients, appointments, and medical records",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Create, read, update, and delete operations work for patient records",
+        "Appointment management functions are fully operational",
+        "Medical record operations maintain data integrity"
+      ]
+    }
+  ],
+  "constraints": [
+    "Must match the visual design from the uploaded reference",
+    "Healthcare data must be handled securely in the backend",
+    "Use only Motoko for backend and React with TypeScript for frontend"
+  ],
+  "nonGoals": [
+    "Actual video call implementation (real-time WebRTC)",
+    "Integration with external healthcare systems or APIs",
+    "Real-time chat functionality",
+    "SMS notifications or external messaging services"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Medical professional avatar placeholder illustration for user profiles (doctor-avatar.dim_200x200.png)",
+      "Telemedicine hero banner with healthcare theme showing digital health concept (telemedicine-hero.dim_1200x400.png)",
+      "Stethoscope icon for medical dashboard (stethoscope-icon.dim_64x64.png)",
+      "Calendar icon for appointment scheduling (calendar-icon.dim_64x64.png)",
+      "Video consultation placeholder icon (video-call-icon.dim_128x128.png)"
+    ],
+    "edits": []
+  }
+}

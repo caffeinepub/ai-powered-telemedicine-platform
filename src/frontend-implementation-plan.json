@@ -1,0 +1,126 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Telemedicine Platform Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement main dashboard layout matching uploaded design reference with navigation, header, and page composition",
+      "acceptanceCriteria": [
+        "Dashboard layout matches the visual hierarchy from the design reference",
+        "Navigation elements are positioned as shown in the design",
+        "Header and main content areas follow the design specifications"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/DashboardLayout.tsx",
+          "operation": "create",
+          "description": "Create main dashboard layout component with navigation sidebar, header section, and content area matching design reference visual hierarchy. Include navigation links for dashboard, patients, appointments, and consultations sections. Wire the generated telemedicine-hero.dim_1200x400.png from frontend/public/assets/generated/telemedicine-hero.dim_1200x400.png into the header banner area."
+        },
+        {
+          "path": "frontend/src/components/layout/Header.tsx",
+          "operation": "create",
+          "description": "Create header component with branding area, user profile display showing the authenticated user's name from UserProfile, and action buttons matching design specifications. Display the doctor-avatar.dim_200x200.png from frontend/public/assets/generated/doctor-avatar.dim_200x200.png as user avatar placeholder. Include login/logout button using the authorization component."
+        },
+        {
+          "path": "frontend/src/components/layout/Navigation.tsx",
+          "operation": "create",
+          "description": "Create navigation component with menu items for Dashboard, Patients, Appointments, and Consultations. Include the generated icons: stethoscope-icon.dim_64x64.png from frontend/public/assets/generated/stethoscope-icon.dim_64x64.png for medical dashboard, calendar-icon.dim_64x64.png from frontend/public/assets/generated/calendar-icon.dim_64x64.png for appointments, and video-call-icon.dim_128x128.png from frontend/public/assets/generated/video-call-icon.dim_128x128.png for consultations. Position and style according to design reference."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire DashboardLayout into the main App component as the primary layout wrapper. Set up React Router routes for dashboard, patients, appointments, and consultations pages. Add ProfileSetupModal for first-time user profile creation using the authorization component's getCallerUserProfile and saveCallerUserProfile functions. Ensure users must be logged in before accessing application data per authorization component guidelines."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Apply color scheme, typography, and visual styling from uploaded design reference throughout the application",
+      "acceptanceCriteria": [
+        "Primary and secondary colors match the design reference",
+        "Typography (font families, sizes, weights) matches the design",
+        "Spacing and padding follow the design system"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS custom properties for healthcare-themed color palette including primary blues/teals for medical trust, secondary greens for health, accent colors, neutral grays, and semantic colors for success/warning/error states. Add typography definitions for font families, sizes, weights, and line heights matching design reference. Include healthcare-appropriate spacing scale and ensure proper base styles for the telemedicine platform theme."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind configuration with custom color tokens for primary, secondary, accent, and semantic colors from design reference. Configure typography plugin with healthcare-appropriate font families and scales. Set up spacing, border radius, and shadow utilities to match design system specifications."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create healthcare-specific UI components including patient cards, appointment widgets, and medical information displays",
+      "acceptanceCriteria": [
+        "Patient information cards match the design layout",
+        "Appointment scheduling interface follows design specifications",
+        "Medical data visualization components align with design reference"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/patients/PatientCard.tsx",
+          "operation": "create",
+          "description": "Create PatientCard component displaying patient name, age, ID, and medical history summary. Style according to design reference with appropriate spacing, borders, and hover states. Accept Patient type from backend interface as props."
+        },
+        {
+          "path": "frontend/src/components/appointments/AppointmentWidget.tsx",
+          "operation": "create",
+          "description": "Create AppointmentWidget component showing appointment time, patient name, doctor ID, and reason. Include status indicators and action buttons. Style according to design specifications. Accept Appointment type from backend interface as props. Use calendar-icon.dim_64x64.png from frontend/public/assets/generated/calendar-icon.dim_64x64.png as visual indicator."
+        },
+        {
+          "path": "frontend/src/components/patients/MedicalInfoDisplay.tsx",
+          "operation": "create",
+          "description": "Create MedicalInfoDisplay component for showing detailed patient medical information including history, age, and other health data. Structure information in readable sections matching design reference layout. Accept Patient type from backend interface as props."
+        },
+        {
+          "path": "frontend/src/pages/Dashboard.tsx",
+          "operation": "create",
+          "description": "Create Dashboard page component that displays overview of recent appointments, patient summary cards, and key metrics. Use PatientCard, AppointmentWidget, and MedicalInfoDisplay components. Fetch data using backend methods getAllPatients and getAllAppointments. Apply authorization guard to ensure only authenticated users can access."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement telemedicine consultation interface with video call placeholder area and consultation controls",
+      "acceptanceCriteria": [
+        "Consultation interface layout matches design reference",
+        "Video call area is positioned and styled as shown",
+        "Consultation controls and buttons follow design patterns"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/consultation/VideoCallPlaceholder.tsx",
+          "operation": "create",
+          "description": "Create VideoCallPlaceholder component displaying a styled placeholder area for video consultation. Include the video-call-icon.dim_128x128.png from frontend/public/assets/generated/video-call-icon.dim_128x128.png as central icon. Position and style according to design reference with appropriate dimensions and visual treatment to indicate video call area."
+        },
+        {
+          "path": "frontend/src/components/consultation/ConsultationControls.tsx",
+          "operation": "create",
+          "description": "Create ConsultationControls component with buttons for consultation actions such as start/end session, add notes, and schedule follow-up. Style controls according to design patterns from reference. Include visual states for active/inactive controls."
+        },
+        {
+          "path": "frontend/src/components/consultation/ConsultationNotes.tsx",
+          "operation": "create",
+          "description": "Create ConsultationNotes component for displaying and editing consultation notes, prescriptions, and follow-up dates. Match design reference layout with proper text input styling and information hierarchy. Accept ConsultationSession type from backend interface as props."
+        },
+        {
+          "path": "frontend/src/pages/ConsultationPage.tsx",
+          "operation": "create",
+          "description": "Create ConsultationPage component that combines VideoCallPlaceholder, ConsultationControls, and ConsultationNotes into cohesive consultation interface. Position components according to design reference layout. Fetch consultation session data using backend methods getConsultationSession and getConsultationsByAppointment. Include appointment context display. Apply authorization guard to ensure only authenticated users can access."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route registration for ConsultationPage at path /consultation/:sessionId to enable navigation to individual consultation sessions."
+        }
+      ]
+    }
+  ]
+}

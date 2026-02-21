@@ -1,0 +1,18 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, authentication flow, profile setup modal, and route definitions for dashboard, patients, appointments, and consultation pages.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for all backend operations including patient management, appointments, consultation sessions, and user profiles with proper cache invalidation.",
+  "frontend/src/components/layout/DashboardLayout.tsx": "Main layout wrapper component that combines header and navigation with content area for authenticated views.",
+  "frontend/src/components/layout/Header.tsx": "Application header with branding, user profile display showing authenticated user's name and avatar, and logout functionality.",
+  "frontend/src/components/layout/Navigation.tsx": "Sidebar navigation component with menu items for Dashboard, Patients, and Appointments pages, including active state highlighting and footer attribution.",
+  "frontend/src/pages/Dashboard.tsx": "Dashboard page displaying statistics cards, upcoming appointments, and recent patients with hero banner image from generated assets.",
+  "frontend/src/pages/PatientsPage.tsx": "Patient management page with search functionality, patient cards grid, and dialog for creating new patient records.",
+  "frontend/src/pages/AppointmentsPage.tsx": "Appointments management page with tabs for upcoming and past appointments, creation dialog, and consultation session initiation.",
+  "frontend/src/pages/ConsultationPage.tsx": "Consultation session page combining video call placeholder, controls, and notes components for telemedicine consultations.",
+  "frontend/src/components/patients/PatientCard.tsx": "Patient information card component displaying patient details, age, medical history, and delete functionality with compact variant option.",
+  "frontend/src/components/appointments/AppointmentWidget.tsx": "Appointment display widget showing date, time, patient info, and action buttons for starting consultations or deleting appointments.",
+  "frontend/src/components/consultation/VideoCallPlaceholder.tsx": "Video consultation area placeholder component with generated video call icon and ready status indicator.",
+  "frontend/src/components/consultation/ConsultationControls.tsx": "Consultation control buttons for video, audio, call end, and scheduling with toggle states.",
+  "frontend/src/components/consultation/ConsultationNotes.tsx": "Consultation notes editor component for clinical notes, prescriptions, and follow-up dates with save functionality.",
+  "frontend/src/index.css": "Global styles with OKLCH-based healthcare color system featuring medical blues, health greens, and proper light/dark mode support with custom utility classes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with medical and health color tokens, Inter font family, and healthcare-appropriate design system settings."
+}

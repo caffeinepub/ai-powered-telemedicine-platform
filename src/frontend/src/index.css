@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Medical Blue - Primary */
+        --background: 1 0 0;
+        --foreground: 0.145 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.145 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.145 0 0;
+        --primary: 0.55 0.15 240;
+        --primary-foreground: 0.99 0 0;
+        --secondary: 0.95 0.01 240;
+        --secondary-foreground: 0.25 0.08 240;
+        --muted: 0.96 0.005 240;
+        --muted-foreground: 0.50 0.02 240;
+        --accent: 0.92 0.02 240;
+        --accent-foreground: 0.25 0.08 240;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.90 0.01 240;
+        --input: 0.90 0.01 240;
+        --ring: 0.55 0.15 240;
+        
+        /* Medical theme colors */
+        --medical-50: 0.98 0.005 240;
+        --medical-100: 0.95 0.01 240;
+        --medical-200: 0.90 0.02 240;
+        --medical-300: 0.80 0.04 240;
+        --medical-400: 0.65 0.08 240;
+        --medical-600: 0.55 0.15 240;
+        --medical-700: 0.45 0.12 240;
+        --medical-900: 0.25 0.08 240;
+        
+        /* Health Green - Secondary */
+        --health-50: 0.98 0.01 150;
+        --health-100: 0.95 0.02 150;
+        --health-600: 0.55 0.12 150;
+        --health-700: 0.45 0.10 150;
+        
+        /* Accent Teal */
+        --accent-600: 0.60 0.10 200;
+        
+        /* Success */
+        --success-600: 0.60 0.12 145;
+        
+        --chart-1: 0.55 0.15 240;
+        --chart-2: 0.55 0.12 150;
+        --chart-3: 0.60 0.10 200;
+        --chart-4: 0.65 0.15 280;
+        --chart-5: 0.70 0.12 320;
+    }
+
+    .dark {
+        --background: 0.15 0.02 240;
+        --foreground: 0.98 0 0;
+        --card: 0.20 0.03 240;
+        --card-foreground: 0.98 0 0;
+        --popover: 0.18 0.03 240;
+        --popover-foreground: 0.98 0 0;
+        --primary: 0.65 0.15 240;
+        --primary-foreground: 0.15 0.02 240;
+        --secondary: 0.25 0.05 240;
+        --secondary-foreground: 0.98 0 0;
+        --muted: 0.25 0.04 240;
+        --muted-foreground: 0.70 0.02 240;
+        --accent: 0.30 0.06 240;
+        --accent-foreground: 0.98 0 0;
+        --destructive: 0.60 0.22 27;
+        --destructive-foreground: 0.98 0 0;
+        --border: 0.30 0.04 240;
+        --input: 0.30 0.04 240;
+        --ring: 0.65 0.15 240;
+        
+        --medical-50: 0.25 0.04 240;
+        --medical-100: 0.28 0.05 240;
+        --medical-200: 0.32 0.06 240;
+        --medical-300: 0.40 0.08 240;
+        --medical-400: 0.50 0.10 240;
+        --medical-600: 0.65 0.15 240;
+        --medical-700: 0.75 0.18 240;
+        --medical-900: 0.90 0.05 240;
+        
+        --health-50: 0.25 0.04 150;
+        --health-100: 0.28 0.05 150;
+        --health-600: 0.65 0.12 150;
+        --health-700: 0.75 0.14 150;
+        
+        --accent-600: 0.70 0.10 200;
+        --success-600: 0.70 0.12 145;
+        
+        --chart-1: 0.65 0.15 240;
+        --chart-2: 0.65 0.12 150;
+        --chart-3: 0.70 0.10 200;
+        --chart-4: 0.75 0.15 280;
+        --chart-5: 0.80 0.12 320;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .text-medical-50 { color: oklch(var(--medical-50)); }
+    .text-medical-100 { color: oklch(var(--medical-100)); }
+    .text-medical-200 { color: oklch(var(--medical-200)); }
+    .text-medical-300 { color: oklch(var(--medical-300)); }
+    .text-medical-400 { color: oklch(var(--medical-400)); }
+    .text-medical-600 { color: oklch(var(--medical-600)); }
+    .text-medical-700 { color: oklch(var(--medical-700)); }
+    .text-medical-900 { color: oklch(var(--medical-900)); }
+    
+    .bg-medical-50 { background-color: oklch(var(--medical-50)); }
+    .bg-medical-100 { background-color: oklch(var(--medical-100)); }
+    .bg-medical-200 { background-color: oklch(var(--medical-200)); }
+    .bg-medical-600 { background-color: oklch(var(--medical-600)); }
+    .bg-medical-700 { background-color: oklch(var(--medical-700)); }
+    .bg-medical-900 { background-color: oklch(var(--medical-900)); }
+    
+    .border-medical-200 { border-color: oklch(var(--medical-200)); }
+    .border-medical-300 { border-color: oklch(var(--medical-300)); }
+    
+    .text-health-600 { color: oklch(var(--health-600)); }
+    .text-health-700 { color: oklch(var(--health-700)); }
+    .bg-health-50 { background-color: oklch(var(--health-50)); }
+    .bg-health-600 { background-color: oklch(var(--health-600)); }
+    .bg-health-700 { background-color: oklch(var(--health-700)); }
+    
+    .text-accent-600 { color: oklch(var(--accent-600)); }
+    .text-success-600 { color: oklch(var(--success-600)); }
+    
+    .hover\:bg-medical-50:hover { background-color: oklch(var(--medical-50)); }
+    .hover\:bg-medical-700:hover { background-color: oklch(var(--medical-700)); }
+    .hover\:bg-health-700:hover { background-color: oklch(var(--health-700)); }
+    .hover\:border-medical-300:hover { border-color: oklch(var(--medical-300)); }
+    .hover\:text-medical-900:hover { color: oklch(var(--medical-900)); }
+}

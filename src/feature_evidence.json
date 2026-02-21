@@ -1,0 +1,95 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-the-main-dashboard-layout-matching-the-uploaded-design-reference-including-navigation-structure-header-layout-and-overall-page-composition",
+      "featureTitle": "Implement the main dashboard layout matching the uploaded design reference, including navigation structure, header layout, and overall page composition",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/DashboardLayout.tsx",
+        "frontend/src/components/layout/Header.tsx",
+        "frontend/src/components/layout/Navigation.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-the-color-scheme-typography-and-visual-styling-from-the-uploaded-design-reference-throughout-the-application",
+      "featureTitle": "Apply the color scheme, typography, and visual styling from the uploaded design reference throughout the application",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-healthcare-specific-ui-components-as-shown-in-the-design-reference-including-patient-cards-appointment-widgets-and-medical-information-displays",
+      "featureTitle": "Create healthcare-specific UI components as shown in the design reference, including patient cards, appointment widgets, and medical information displays",
+      "files": [
+        "frontend/src/components/appointments/AppointmentWidget.tsx",
+        "frontend/src/components/patients/PatientCard.tsx",
+        "frontend/src/pages/Dashboard.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-telemedicine-consultation-interface-as-depicted-in-the-design-including-video-call-placeholder-area-and-consultation-controls",
+      "featureTitle": "Implement the telemedicine consultation interface as depicted in the design, including video call placeholder area and consultation controls",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/consultation/ConsultationControls.tsx",
+        "frontend/src/components/consultation/ConsultationNotes.tsx",
+        "frontend/src/components/consultation/VideoCallPlaceholder.tsx",
+        "frontend/src/pages/ConsultationPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

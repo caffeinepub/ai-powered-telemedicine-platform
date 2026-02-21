@@ -1,2 +1,3 @@
-# ai-powered-telemedicine-platform
-Exported from Caffeine project: AI-Powered Telemedicine Platform
+## AI-Powered Telemedicine Platform
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
